@@ -16,10 +16,24 @@ import org.insset.client.service.RomanConverterService;
 public class RomanConverterServiceImpl extends RemoteServiceServlet implements
         RomanConverterService {
 
-    @Override
+     @Override
     public String convertDateYears(String nbr) throws IllegalArgumentException {
-        //Implement your code
-        return "XV/III/MX";
+        
+        String spl[] = nbr.split("/");
+        
+        int jour = Integer.parseInt(spl[0]);
+        int mois = Integer.parseInt(spl[1]);
+        int annee = Integer.parseInt(spl[2]);
+        
+        
+         String resultat = intToRoman(jour);
+         resultat += "/";
+         resultat += intToRoman(mois);
+         resultat += "/";
+         resultat += intToRoman(annee);
+        
+        return resultat;
+        
     }
 
     @Override
