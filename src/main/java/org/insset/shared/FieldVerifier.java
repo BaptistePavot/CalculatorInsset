@@ -53,8 +53,15 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
-        return true;
+       if   (nbr <=0              || nbr >= 2001)
+       {
+           return false;
+       }
+       else
+       {
+          return true; 
+       }
+        
     }
 
     public static boolean isValidRoman(String nbr) {
@@ -79,7 +86,15 @@ public class FieldVerifier {
 		return false;
 	}
     public static boolean isValidDate(String date) {
-        //Implement your code
-        return true;
+              boolean checkFormat;
+
+        if (date.matches("([0-3])([0-9])/([0-9])([0-3])/([0-2])([0-9])([0-9])([0-9])"))
+            checkFormat=true;
+        else
+           checkFormat=false;
+        return checkFormat;
+    
     }
+    
+   
 }
