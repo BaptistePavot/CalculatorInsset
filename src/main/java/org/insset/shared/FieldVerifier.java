@@ -52,8 +52,15 @@ public class FieldVerifier {
      * @return true if valid, false if invalid
      */
     public static boolean isValidDecimal(Integer nbr) {
-        //Implement your code
-        return true;
+       if   (nbr <=0              || nbr >= 2001)
+       {
+           return false;
+       }
+       else
+       {
+          return true; 
+       }
+        
     }
 
     public static boolean isValidRoman(String nbr) {
@@ -64,5 +71,28 @@ public class FieldVerifier {
     public static boolean isValidDate(String date) {
         //Implement your code
         return true;
+    }
+    
+      // Fonction pour convertir en romain
+    public static String intToRoman(int num)  
+    {  
+ 
+        String m[] = {"", "M", "MM", "MMM"};
+        String c[] = {"", "C", "CC", "CCC", "CD", "D",  
+                            "DC", "DCC", "DCCC", "CM"};
+        String x[] = {"", "X", "XX", "XXX", "XL", "L",  
+                            "LX", "LXX", "LXXX", "XC"};
+        String i[] = {"", "I", "II", "III", "IV", "V",  
+                            "VI", "VII", "VIII", "IX"};
+             
+        // Conversion en romain
+        String thousands = m[num/1000];
+        String hundereds = c[(num%1000)/100];
+        String tens = x[(num%100)/10];
+        String ones = i[num%10];
+             
+        String ans = thousands + hundereds + tens + ones;
+             
+        return ans;
     }
 }
