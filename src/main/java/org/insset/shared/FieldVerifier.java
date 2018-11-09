@@ -62,7 +62,13 @@ public class FieldVerifier {
     }
 
     public static boolean isValidDate(String date) {
-        //Implement your code
-        return true;
+              boolean checkFormat;
+
+        if (date.matches("([0-3])([0-9])/([0-9])([0-3])/([0-2])([0-9])([0-9])([0-9])"))
+            checkFormat=true;
+        else
+           checkFormat=false;
+        return checkFormat;
+    
     }
 }
