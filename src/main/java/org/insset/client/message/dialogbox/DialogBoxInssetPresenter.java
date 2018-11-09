@@ -46,7 +46,7 @@ public class DialogBoxInssetPresenter extends DialogBox {
         dialogVPanel.addStyleName("dialogVPanel");
         dialogVPanel.add(new HTML("<b>Demande envoyé au server :</b>"));
         dialogVPanel.add(textToServerLabel);
-        dialogVPanel.add(new HTML("<br><b>Reponse :</b>"));
+        dialogVPanel.add(new HTML("<br><b>Resultat de la conversion :</b>"));
         dialogVPanel.add(serverResponseLabel);
         dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
         dialogVPanel.add(closeButton);

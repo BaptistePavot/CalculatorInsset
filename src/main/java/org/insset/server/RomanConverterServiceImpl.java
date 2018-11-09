@@ -7,6 +7,8 @@ package org.insset.server;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import org.insset.client.service.RomanConverterService;
+import org.insset.shared.FieldVerifier;
+
 
 /**
  *
@@ -25,13 +27,20 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
     @Override
     public Integer convertRomanToArabe(String nbr) throws IllegalArgumentException {
         //Implement your code
+        
         return 3;
     }
 
     @Override
     public String convertArabeToRoman(Integer nbr) throws IllegalArgumentException {
-        //Implement your code
-        return new String("XVXX");
+    String result;    
+    
+        result = FieldVerifier.intToRoman(nbr);
+        
+        return result;
     }
+    
+    
+    
 
 }

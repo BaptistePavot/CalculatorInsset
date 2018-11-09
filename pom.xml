@@ -6,7 +6,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.insset</groupId>
-  <artifactId>calculatorInsset</artifactId>
+  <artifactId>calculatorInset</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
 
