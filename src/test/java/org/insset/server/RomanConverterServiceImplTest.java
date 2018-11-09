@@ -43,13 +43,13 @@ public class RomanConverterServiceImplTest {
     @Test
     public void testConvertDateYears() {
         System.out.println("convertDateYears");
-        String nbr = "";
+        String nbr = "11/11/1980";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        String expResult = "";
+        String expResult = "XI/XI/MCMLXXX";
         String result = instance.convertDateYears(nbr);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -58,13 +58,13 @@ public class RomanConverterServiceImplTest {
     @Test
     public void testConvertRomanToArabe() {
         System.out.println("convertRomanToArabe");
-        String nbr = "";
+        String nbr = "V";
         RomanConverterServiceImpl instance = new RomanConverterServiceImpl();
-        Integer expResult = null;
+        Integer expResult = 5;
         Integer result = instance.convertRomanToArabe(nbr);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**

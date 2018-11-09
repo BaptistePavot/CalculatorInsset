@@ -1,5 +1,7 @@
 package org.insset.shared;
 
+import static java.lang.Integer.parseInt;
+
 /**
  * <p>
  * FieldVerifier validates that the name the user enters is valid.
@@ -71,7 +73,7 @@ public class FieldVerifier {
     public static boolean isValidDate(String date) {
               boolean checkFormat;
 
-        if (date.matches("([0-3])([0-9])/([0-9])([0-3])/([0-2])([0-9])([0-9])([0-9])"))
+        if (date.matches("([0-3])([0-9])/([0-9])([0-3])/([0-2])([0-9])([0-9])([0-9])") && parseInt(date.split("/")[2]) < 2000)
             checkFormat=true;
         else
            checkFormat=false;

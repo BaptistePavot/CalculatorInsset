@@ -118,16 +118,29 @@ public class FieldVerifierTest {
      * Test of isValidDate method, of class FieldVerifier.
      */
     @Test
-    public void testIsValidDate() {
+    public void testIsValidDateOk() {
         System.out.println("isValidDate");
-        String date = "";
+        String date = "11/11/1980";
+        boolean expResult = true;
+        boolean result = FieldVerifier.isValidDate(date);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        
+    }
+    
+    /**
+     * Test of isValidDate method, of class FieldVerifier.
+     */
+    @Test
+    public void testIsValidDateNoOk() {
+        System.out.println("isValidDate");
+        String date = "j1/11/1980";
         boolean expResult = false;
         boolean result = FieldVerifier.isValidDate(date);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
-
     /**
      * Test of intToRoman method, of class FieldVerifier.
      */

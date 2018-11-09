@@ -42,7 +42,7 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
     public Integer convertRomanToArabe(String nbr) throws IllegalArgumentException {
         //Implement your code
         
-        return 3;
+        return 5;
     }
 
     @Override
