@@ -22,6 +22,7 @@ package org.insset.shared;
  */
 public class FieldVerifier {
 
+         private final static String[] acceptedchar={"I","V","X","L","C","D","M"};
     /**
      * Verifies that the specified name is valid for our service.
      *
@@ -64,10 +65,26 @@ public class FieldVerifier {
     }
 
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
-        return true;
+     boolean  actuval = false;
+		
+		for (int i=0;i<nbr.length();i++)
+		{
+                    for (int j=0;j<acceptedchar.length;j++)
+			if (nbr.substring(i, i+1).equals(acceptedchar[j])) actuval=true;
+			
+		}
+		return actuval;
     }
-
+    /**
+	 * Validate if the entered integer value is in the accepted limits
+	 * @param val
+	 * @return true if ok
+	 */
+	public static boolean IsRomanNumber(int val)
+	{
+		if ( val>0  &&  val<=1999 )return true;
+		return false;
+	}
     public static boolean isValidDate(String date) {
               boolean checkFormat;
 
